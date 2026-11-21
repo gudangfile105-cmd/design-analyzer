@@ -20,17 +20,42 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            studioBg: '#0B0F19',
-            studioCard: '#131A2A',
-            studioWell: '#090D16',
-            studioBorder: '#1E293B',
-            studioIndigo: '#6366F1',
-            studioEmerald: '#10B981',
+            studioBg: '#191712',
+            studioCard: '#232019',
+            studioWell: '#0E0D0A',
+            studioBorder: '#383428',
+            studioIndigo: '#E3A72F',
+            studioEmerald: '#86A98F',
+            indigo: {
+              200: '#F6DBA6',
+              300: '#F1CD85',
+              400: '#ECBE65',
+              500: '#E3A72F', // Base Accent
+              600: '#D19625', // Hover
+            },
+            violet: { 
+              500: '#D19625',
+              600: '#BD851D',
+            },
+            sky: { 
+              200: '#C2D9C8',
+              300: '#A9C6B2',
+              400: '#94B89F',
+              500: '#86A98F', // Secondary Accent
+              600: '#75957C',
+            },
+            emerald: { 
+              200: '#C2D9C8',
+              300: '#A9C6B2',
+              400: '#94B89F',
+              500: '#86A98F', // Secondary Accent
+              600: '#75957C',
+            }
           },
           boxShadow: {
-            studio: '0 10px 35px -10px rgba(2, 6, 23, 0.75)',
-            indigoGlow: '0 0 30px -6px rgba(99, 102, 241, 0.35)',
-            emeraldGlow: '0 0 24px -6px rgba(16, 185, 129, 0.30)',
+            studio: '0 10px 35px -10px rgba(14, 13, 10, 0.75)',
+            indigoGlow: '0 0 30px -6px rgba(227, 167, 47, 0.35)',
+            emeraldGlow: '0 0 24px -6px rgba(134, 169, 143, 0.30)',
           }
         }
       }
@@ -39,7 +64,7 @@
   <style>
     * {
       scrollbar-width: thin;
-      scrollbar-color: #334155 transparent;
+      scrollbar-color: #383428 transparent;
     }
     ::-webkit-scrollbar {
       width: 6px;
@@ -49,56 +74,56 @@
       background: transparent;
     }
     ::-webkit-scrollbar-thumb {
-      background: #334155;
+      background: #383428;
       border-radius: 9999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #475569;
+      background: #504B3E;
     }
 
     body {
-      background-color: #0B0F19;
-      color: #F8FAFC;
+      background-color: #191712;
+      color: #ECE5D3;
       background-image:
-        radial-gradient(ellipse 75% 45% at 50% -12%, rgba(99, 102, 241, 0.16), transparent),
-        radial-gradient(ellipse 45% 35% at 90% 8%, rgba(16, 185, 129, 0.08), transparent);
+        radial-gradient(ellipse 75% 45% at 50% -12%, rgba(227, 167, 47, 0.16), transparent),
+        radial-gradient(ellipse 45% 35% at 90% 8%, rgba(134, 169, 143, 0.08), transparent);
       min-height: 100vh;
       overflow-x: hidden;
     }
 
     .studio-panel {
-      background-color: #131A2A;
-      border: 1px solid #1E293B;
-      box-shadow: 0 10px 35px -10px rgba(2, 6, 23, 0.75);
+      background-color: #232019;
+      border: 1px solid #383428;
+      box-shadow: 0 10px 35px -10px rgba(14, 13, 10, 0.75);
     }
 
     .studio-subcard {
-      background-color: rgba(15, 23, 42, 0.72);
-      border: 1px solid #1E293B;
+      background-color: rgba(35, 32, 25, 0.72);
+      border: 1px solid #383428;
       transition: border-color 0.2s ease, background-color 0.2s ease;
     }
 
     .studio-subcard:hover {
-      border-color: rgba(99, 102, 241, 0.45);
-      background-color: rgba(19, 26, 42, 0.95);
+      border-color: rgba(227, 167, 47, 0.45);
+      background-color: rgba(35, 32, 25, 0.95);
     }
 
     .dropzone-active {
-      border-color: #10B981 !important;
-      background-color: rgba(16, 185, 129, 0.08) !important;
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+      border-color: #86A98F !important;
+      background-color: rgba(134, 169, 143, 0.08) !important;
+      box-shadow: 0 0 0 3px rgba(134, 169, 143, 0.18);
     }
 
     /* Syntax Highlighting for JS Code Block */
-    .tok-kw { color: #C084FC; font-weight: 600; }
-    .tok-var { color: #38BDF8; font-weight: 600; }
-    .tok-key { color: #93C5FD; }
-    .tok-str { color: #6EE7B7; }
+    .tok-kw { color: #E3A72F; font-weight: 600; }
+    .tok-var { color: #86A98F; font-weight: 600; }
+    .tok-key { color: #F1CD85; }
+    .tok-str { color: #94B89F; }
     .tok-hex { color: #FDE047; font-weight: 700; }
-    .tok-comm { color: #64748B; font-style: italic; }
+    .tok-comm { color: #A39C8D; font-style: italic; }
 
     .gemini-glow {
-      box-shadow: 0 0 28px -6px rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 28px -6px rgba(148, 184, 159, 0.35);
     }
 
     @keyframes fadeSlideUp {
@@ -110,12 +135,12 @@
     }
   </style>
 </head>
-<body class="font-sans antialiased text-[#F8FAFC] selection:bg-indigo-500/30 selection:text-indigo-200">
+<body class="font-sans antialiased text-[#ECE5D3] selection:bg-indigo-500/30 selection:text-indigo-200">
 
   <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
 
-  <!-- Optional API Key Modal (Hidden by default; Canvas runtime provides API key automatically) -->
+  <!-- Optional API Key Modal -->
   <div id="settings-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
     <div class="studio-panel rounded-2xl max-w-md w-full p-6">
       <div class="flex items-center justify-between mb-4">
@@ -123,21 +148,21 @@
           <div class="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"/></svg>
           </div>
-          <h3 class="text-base font-bold text-[#F8FAFC]">Konfigurasi Mesin Gemini API</h3>
+          <h3 class="text-base font-bold text-[#ECE5D3]">Konfigurasi Mesin Gemini API</h3>
         </div>
         <button id="close-settings-btn" type="button" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-white/5 transition">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      <p class="text-xs text-[#CBD5E1] leading-relaxed mb-4">
+      <p class="text-xs text-[#A39C8D] leading-relaxed mb-4">
         Di lingkungan Canvas, kredensial Gemini API dikelola otomatis saat runtime. Jika Anda membuka file ini secara mandiri di luar Canvas, masukkan Gemini API Key Anda di bawah ini (atau biarkan kosong untuk menggunakan mesin analisis lokal Canvas).
       </p>
-      <label for="custom-api-key" class="block text-xs font-semibold text-[#F8FAFC] mb-1.5">Gemini API Key (Opsional)</label>
+      <label for="custom-api-key" class="block text-xs font-semibold text-[#ECE5D3] mb-1.5">Gemini API Key (Opsional)</label>
       <input id="custom-api-key" type="password" placeholder="AIzaSy... (kosongkan untuk mode otomatis)"
-        class="w-full rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 text-sm text-[#F8FAFC] placeholder-slate-500 focus:outline-none focus:border-indigo-500 mb-4 font-mono" />
+        class="w-full rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 text-sm text-[#ECE5D3] placeholder-slate-500 focus:outline-none focus:border-indigo-500 mb-4 font-mono" />
       <div class="flex justify-end gap-2">
         <button id="save-settings-btn" type="button"
-          class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
+          class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-[#191712] text-xs font-semibold transition">
           Simpan Pengaturan
         </button>
       </div>
@@ -145,13 +170,13 @@
   </div>
 
   <!-- Top Header & Main Tab Navigation -->
-  <header class="sticky top-0 z-30 border-b border-studioBorder bg-[#0B0F19]/90 backdrop-blur-xl">
+  <header class="sticky top-0 z-30 border-b border-studioBorder bg-[#191712]/90 backdrop-blur-xl">
     <div class="max-w-[1560px] mx-auto px-4 sm:px-6 py-4">
       <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
         <!-- Brand Identity -->
         <div class="flex items-start sm:items-center gap-3.5 min-w-0">
           <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-emerald-500 p-[1.5px] shrink-0 shadow-indigoGlow mt-0.5 sm:mt-0">
-            <div class="w-full h-full rounded-[10px] bg-[#0B0F19] flex items-center justify-center">
+            <div class="w-full h-full rounded-[10px] bg-[#191712] flex items-center justify-center">
               <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
               </svg>
@@ -159,17 +184,17 @@
           </div>
           <div class="min-w-0">
             <div class="flex items-center gap-2.5 flex-wrap">
-              <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-[#F8FAFC]">Design Prompt Analyzer</h1>
+              <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-[#ECE5D3]">Design Prompt Analyzer</h1>
               <span id="engine-status-badge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-sky-500/15 text-sky-300 border border-sky-400/30 whitespace-nowrap">
                 <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
                 Gemini Image + Vision + Canvas Engine
               </span>
-              <span id="realtime-process-pill" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-studioWell text-[#CBD5E1] border border-studioBorder whitespace-nowrap">
+              <span id="realtime-process-pill" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-studioWell text-[#A39C8D] border border-studioBorder whitespace-nowrap">
                 <span id="realtime-dot" class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                 <span id="realtime-status-text">Studio Siap</span>
               </span>
             </div>
-            <p class="text-xs sm:text-[13px] text-[#CBD5E1] mt-1 max-w-2xl leading-relaxed">
+            <p class="text-xs sm:text-[13px] text-[#A39C8D] mt-1 max-w-2xl leading-relaxed">
               Ekstrak struktur desain visual, palet HEX, motion, dan audio ke kode JS, serta buat prompt &amp; gambar langsung dengan <span class="text-sky-300 font-semibold">Gemini Image</span>.
             </p>
           </div>
@@ -179,24 +204,24 @@
         <div class="flex items-center gap-2.5 self-start xl:self-center w-full sm:w-auto justify-between sm:justify-end shrink-0">
           <nav aria-label="Navigasi Mode Cepat Studio" class="inline-flex flex-wrap p-1 rounded-xl bg-studioWell border border-studioBorder w-full sm:w-auto gap-1">
             <button id="mode-btn-split" type="button" onclick="switchViewMode('split')"
-              class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all bg-indigo-600 text-white shadow-sm">
+              class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all bg-indigo-600 text-[#191712] shadow-sm">
               <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z"/></svg>
               <span>Tampilan Penuh 2 Kolom</span>
             </button>
             <button id="mode-btn-analyzer" type="button" onclick="switchViewMode('analyzer')"
-              class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-[#CBD5E1] hover:text-white">
+              class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-[#A39C8D] hover:text-[#ECE5D3]">
               <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
               <span>Fokus Analyzer</span>
             </button>
             <button id="mode-btn-generator" type="button" onclick="switchViewMode('generator')"
-              class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-[#CBD5E1] hover:text-white">
+              class="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-[#A39C8D] hover:text-[#ECE5D3]">
               <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
               <span>Fokus Prompt Referensi</span>
             </button>
           </nav>
 
           <button id="open-settings-btn" type="button" title="Pengaturan API Key"
-            class="p-2.5 rounded-xl bg-studioWell border border-studioBorder text-[#CBD5E1] hover:text-white hover:border-indigo-400/50 transition shrink-0">
+            class="p-2.5 rounded-xl bg-studioWell border border-studioBorder text-[#A39C8D] hover:text-[#ECE5D3] hover:border-indigo-400/50 transition shrink-0">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </button>
         </div>
@@ -217,8 +242,8 @@
       <div id="analyzer-left-col" class="studio-panel rounded-2xl p-5 sm:p-6 flex flex-col gap-[18px] min-w-0">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div>
-            <h2 class="text-base font-bold text-[#F8FAFC]">Input Media Referensi</h2>
-            <p class="text-xs text-[#CBD5E1] mt-0.5">Unggah gambar/video atau tempel langsung via Ctrl/Cmd+V</p>
+            <h2 class="text-base font-bold text-[#ECE5D3]">Input Media Referensi</h2>
+            <p class="text-xs text-[#A39C8D] mt-0.5">Unggah gambar/video atau tempel langsung via Ctrl/Cmd+V</p>
           </div>
           <button id="load-sample-btn" type="button"
             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/25 transition shrink-0">
@@ -230,8 +255,8 @@
         <!-- Media Upload & Paste Area -->
         <div>
           <div class="flex items-center justify-between mb-2">
-            <label class="text-xs font-semibold text-[#F8FAFC]">Gambar / Video Referensi</label>
-            <span class="text-[11px] font-mono text-slate-400">PNG, JPG, WEBP, GIF, MP4, WEBM, MOV</span>
+            <label class="text-xs font-semibold text-[#ECE5D3]">Gambar / Video Referensi</label>
+            <span class="text-[11px] font-mono text-[#A39C8D]">PNG, JPG, WEBP, GIF, MP4, WEBM, MOV</span>
           </div>
 
           <input id="analyzer-file-input" type="file" accept="image/png,image/jpeg,image/webp,image/gif,video/mp4,video/webm,video/quicktime,image/*,video/*" class="hidden" />
@@ -244,13 +269,28 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
               </svg>
             </div>
-            <p class="text-sm font-semibold text-[#F8FAFC]">
+            <p class="text-sm font-semibold text-[#ECE5D3]">
               Seret &amp; lepas file di sini, atau <span class="text-indigo-400 underline underline-offset-2">pilih dari perangkat</span>
             </p>
             <p class="text-xs text-emerald-300 font-medium mt-2.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/25">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
               Tempel gambar langsung dengan Ctrl+V / Cmd+V
             </p>
+          </div>
+
+          <!-- URL Input Container -->
+          <div id="analyzer-url-container" class="mt-3 flex gap-2">
+            <div class="relative flex-1">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+              </div>
+              <input id="analyzer-url-input" type="url" placeholder="Tempel link video (YouTube, TikTok, IG) atau URL gambar..."
+                class="w-full rounded-xl bg-studioWell border border-studioBorder pl-9 pr-3.5 py-2.5 text-xs sm:text-sm text-[#ECE5D3] placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition" />
+            </div>
+            <button id="analyzer-url-btn" type="button"
+              class="px-4 py-2.5 rounded-xl bg-studioCard border border-studioBorder text-[#A39C8D] hover:bg-indigo-600 hover:text-[#191712] hover:border-indigo-500 transition text-xs font-semibold shrink-0 shadow-sm">
+              Proses Link
+            </button>
           </div>
 
           <!-- Interactive Media Preview Container -->
@@ -270,15 +310,15 @@
               <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
                 <div class="flex items-center gap-2 min-w-0">
                   <span id="analyzer-media-badge" class="px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold uppercase">IMG</span>
-                  <span id="analyzer-media-meta" class="text-[#F8FAFC] truncate font-mono text-[11px]">referensi.png</span>
+                  <span id="analyzer-media-meta" class="text-[#ECE5D3] truncate font-mono text-[11px]">referensi.png</span>
                 </div>
-                <span id="analyzer-luminance-badge" class="px-2 py-0.5 rounded-md bg-slate-800 text-[#CBD5E1] font-mono text-[11px]">Dark Tone</span>
+                <span id="analyzer-luminance-badge" class="px-2 py-0.5 rounded-md bg-slate-800 text-[#A39C8D] font-mono text-[11px]">Dark Tone</span>
               </div>
 
               <!-- 6 Dominant Canvas HEX Colors -->
               <div>
                 <div class="flex items-center justify-between mb-1.5">
-                  <span class="text-[11px] font-medium text-[#CBD5E1]">6 Warna Dominan Piksel Canvas (klik salin):</span>
+                  <span class="text-[11px] font-medium text-[#A39C8D]">6 Warna Dominan Piksel Canvas (klik salin):</span>
                 </div>
                 <div id="analyzer-sampled-swatches" class="grid grid-cols-3 sm:grid-cols-6 gap-1.5"></div>
               </div>
@@ -287,7 +327,7 @@
               <div id="video-keyframes-section" class="hidden pt-2 border-t border-studioBorder/80">
                 <div class="flex items-center justify-between mb-2">
                   <span class="text-[11px] font-semibold text-emerald-300">4 Keyframe Video Diekstrak Otomatis:</span>
-                  <span id="video-duration-label" class="text-[11px] font-mono text-slate-400">0.0s</span>
+                  <span id="video-duration-label" class="text-[11px] font-mono text-[#A39C8D]">0.0s</span>
                 </div>
                 <div id="video-keyframes-grid" class="grid grid-cols-4 gap-2"></div>
               </div>
@@ -297,10 +337,10 @@
 
         <!-- Platform Tujuan Dropdown -->
         <div>
-          <label for="analyzer-platform" class="block text-xs font-semibold text-[#F8FAFC] mb-2">Platform Tujuan</label>
+          <label for="analyzer-platform" class="block text-xs font-semibold text-[#ECE5D3] mb-2">Platform Tujuan</label>
           <div class="relative">
             <select id="analyzer-platform"
-              class="w-full appearance-none rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 pr-10 text-sm text-[#F8FAFC] focus:outline-none focus:border-indigo-500 transition">
+              class="w-full appearance-none rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 pr-10 text-sm text-[#ECE5D3] focus:outline-none focus:border-indigo-500 transition">
               <option value="Instagram Reels / Feed (9:16 & 4:5)">Instagram Reels / Feed (9:16 &amp; 4:5)</option>
               <option value="TikTok (9:16)">TikTok (9:16)</option>
               <option value="YouTube Shorts (9:16)">YouTube Shorts (9:16)</option>
@@ -308,23 +348,23 @@
               <option value="Meta Ads / Performance Creative">Meta Ads / Performance Creative</option>
               <option value="Poster / Banner Cetak">Poster / Banner Cetak</option>
             </select>
-            <svg class="w-4 h-4 text-slate-400 pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            <svg class="w-4 h-4 text-[#A39C8D] pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
           </div>
         </div>
 
         <!-- Catatan Tambahan (Opsional) -->
         <div>
-          <label for="analyzer-notes" class="block text-xs font-semibold text-[#F8FAFC] mb-2">
-            Catatan Tambahan <span class="text-slate-400 font-normal">(Opsional)</span>
+          <label for="analyzer-notes" class="block text-xs font-semibold text-[#ECE5D3] mb-2">
+            Catatan Tambahan <span class="text-[#A39C8D] font-normal">(Opsional)</span>
           </label>
           <textarea id="analyzer-notes" rows="3"
             placeholder="Contoh: Fokus analisis pada hook 3 detik pertama, hierarki font headline, warna tombol CTA, atau gaya transisi antar-scene..."
-            class="w-full rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 text-sm text-[#F8FAFC] placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition resize-y"></textarea>
+            class="w-full rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 text-sm text-[#ECE5D3] placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition resize-y"></textarea>
         </div>
 
         <!-- Primary Action Button with Multi-Step Loading -->
         <button id="analyze-submit-btn" type="button"
-          class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-sm shadow-indigoGlow transition-all flex items-center justify-center gap-2.5 disabled:opacity-65 disabled:cursor-not-allowed">
+          class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-[#191712] font-bold text-sm shadow-indigoGlow transition-all flex items-center justify-center gap-2.5 disabled:opacity-65 disabled:cursor-not-allowed">
           <svg id="analyze-btn-icon" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
           <svg id="analyze-btn-spinner" class="hidden w-4 h-4 animate-spin shrink-0" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
           <span id="analyze-btn-text">Analisis Desain &amp; Buat Kode JS</span>
@@ -339,11 +379,11 @@
           <div class="w-14 h-14 rounded-2xl bg-indigo-500/15 border border-indigo-400/25 mx-auto flex items-center justify-center text-indigo-300 mb-4">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"/></svg>
           </div>
-          <h3 class="text-base sm:text-lg font-bold text-[#F8FAFC]">Hasil Analisis Desain &amp; Spesifikasi JS</h3>
-          <p class="text-xs sm:text-sm text-[#CBD5E1] max-w-lg mx-auto mt-2 leading-relaxed">
+          <h3 class="text-base sm:text-lg font-bold text-[#ECE5D3]">Hasil Analisis Desain &amp; Spesifikasi JS</h3>
+          <p class="text-xs sm:text-sm text-[#A39C8D] max-w-lg mx-auto mt-2 leading-relaxed">
             Unggah gambar atau video di panel kiri, atau klik <strong class="text-emerald-300 font-semibold">Muat Contoh Desain</strong> untuk melihat 8 kartu analisis lengkap beserta kode JavaScript ES6 siap pakai.
           </p>
-          <div class="mt-6 flex flex-wrap justify-center gap-2 text-[11px] font-mono text-[#CBD5E1]">
+          <div class="mt-6 flex flex-wrap justify-center gap-2 text-[11px] font-mono text-[#A39C8D]">
             <span class="px-2.5 py-1 rounded-lg bg-studioWell border border-studioBorder">1. Ringkasan</span>
             <span class="px-2.5 py-1 rounded-lg bg-studioWell border border-studioBorder">2. Warna (HEX)</span>
             <span class="px-2.5 py-1 rounded-lg bg-studioWell border border-studioBorder">3. Animasi</span>
@@ -363,15 +403,15 @@
             <!-- Sub-Tab Switcher -->
             <div class="inline-flex p-1 rounded-xl bg-studioWell border border-studioBorder">
               <button type="button" data-result-view="both" onclick="switchResultView('both')"
-                class="result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition">
+                class="result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-[#191712] transition">
                 Semua (Kode + Kartu)
               </button>
               <button type="button" data-result-view="summary" onclick="switchResultView('summary')"
-                class="result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-[#CBD5E1] hover:text-white transition">
+                class="result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-[#A39C8D] hover:text-[#ECE5D3] transition">
                 Ringkasan Visual (8 Kartu)
               </button>
               <button type="button" data-result-view="code" onclick="switchResultView('code')"
-                class="result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-[#CBD5E1] hover:text-white transition">
+                class="result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-[#A39C8D] hover:text-[#ECE5D3] transition">
                 Kode JS Terstruktur
               </button>
             </div>
@@ -393,24 +433,24 @@
                   <span class="w-2.5 h-2.5 rounded-full bg-amber-400/85"></span>
                   <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/85"></span>
                 </div>
-                <span class="text-xs font-mono font-bold text-[#F8FAFC] ml-1">designAnalysis.js</span>
+                <span class="text-xs font-mono font-bold text-[#ECE5D3] ml-1">designAnalysis.js</span>
                 <span id="js-platform-pill" class="hidden sm:inline-block px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-400/25">Instagram Reels / Feed</span>
               </div>
               <div class="flex items-center gap-2">
                 <button id="download-js-btn" type="button"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-studioCard hover:bg-slate-800 text-[#F8FAFC] border border-studioBorder transition">
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-studioCard hover:bg-slate-800 text-[#ECE5D3] border border-studioBorder transition">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
                   Unduh File (.js)
                 </button>
                 <button id="copy-js-btn" type="button"
-                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition shadow-sm">
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-[#191712] transition shadow-sm">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
                   Salin Kode JS
                 </button>
               </div>
             </div>
             <div class="p-4 sm:p-5 bg-studioWell overflow-x-auto max-h-[420px]">
-              <pre id="js-code-output" class="font-mono text-xs sm:text-[13px] leading-relaxed text-[#F8FAFC]"></pre>
+              <pre id="js-code-output" class="font-mono text-xs sm:text-[13px] leading-relaxed text-[#ECE5D3]"></pre>
             </div>
           </div>
 
@@ -418,14 +458,14 @@
           <div id="result-summary-section" class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <h3 class="text-sm sm:text-base font-bold text-[#F8FAFC]">Tampilan Ringkasan Visual (8 Kartu Detail)</h3>
-                <p class="text-xs text-[#CBD5E1]">Klik kode warna HEX pada kartu Warna untuk menyalin instan</p>
+                <h3 class="text-sm sm:text-base font-bold text-[#ECE5D3]">Tampilan Ringkasan Visual (8 Kartu Detail)</h3>
+                <p class="text-xs text-[#A39C8D]">Klik kode warna HEX pada kartu Warna untuk menyalin instan</p>
               </div>
               <div id="detail-filter-pills" class="flex flex-wrap gap-1.5">
-                <button type="button" data-filter="all" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition">Semua (8)</button>
-                <button type="button" data-filter="visual" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#CBD5E1] border border-studioBorder hover:text-white transition">Visual &amp; Warna</button>
-                <button type="button" data-filter="motion" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#CBD5E1] border border-studioBorder hover:text-white transition">Motion &amp; Kamera</button>
-                <button type="button" data-filter="conversion" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#CBD5E1] border border-studioBorder hover:text-white transition">CTA, Subtitle &amp; SFX</button>
+                <button type="button" data-filter="all" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-600 text-[#191712] transition">Semua (8)</button>
+                <button type="button" data-filter="visual" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#A39C8D] border border-studioBorder hover:text-[#ECE5D3] transition">Visual &amp; Warna</button>
+                <button type="button" data-filter="motion" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#A39C8D] border border-studioBorder hover:text-[#ECE5D3] transition">Motion &amp; Kamera</button>
+                <button type="button" data-filter="conversion" class="filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#A39C8D] border border-studioBorder hover:text-[#ECE5D3] transition">CTA, Subtitle &amp; SFX</button>
               </div>
             </div>
 
@@ -451,8 +491,8 @@
               Gemini Image + Multi-Engine Prompt Studio
             </span>
           </div>
-          <h2 class="text-lg sm:text-xl font-bold text-[#F8FAFC]">Pembuat Prompt dari Referensi</h2>
-          <p class="text-xs sm:text-sm text-[#CBD5E1] mt-1 leading-relaxed">
+          <h2 class="text-lg sm:text-xl font-bold text-[#ECE5D3]">Pembuat Prompt dari Referensi</h2>
+          <p class="text-xs sm:text-sm text-[#A39C8D] mt-1 leading-relaxed">
             Tempel atau unggah gambar referensi, pilih target <strong class="text-sky-300">Gemini Image</strong> atau <strong class="text-indigo-300">ChatGPT</strong> pada <em>Hasil yang Dibuat</em>, kunci elemen referensi, lalu buat prompt presisi atau generate gambar langsung.
           </p>
         </div>
@@ -469,8 +509,8 @@
         <div id="ref-image-card" class="studio-panel rounded-2xl p-5 sm:p-6 flex flex-col gap-4 min-w-0">
           <div class="flex items-center justify-between gap-2">
             <div>
-              <label class="text-xs sm:text-sm font-bold text-[#F8FAFC]">Gambar Referensi</label>
-              <p class="text-[11px] text-[#CBD5E1] mt-0.5">Tempel langsung (Ctrl/Cmd+V) atau unggah file</p>
+              <label class="text-xs sm:text-sm font-bold text-[#ECE5D3]">Gambar Referensi</label>
+              <p class="text-[11px] text-[#A39C8D] mt-0.5">Tempel langsung (Ctrl/Cmd+V) atau unggah file</p>
             </div>
             <button id="ref-browse-trigger" type="button" class="text-xs text-indigo-400 hover:text-indigo-300 font-semibold underline underline-offset-2 whitespace-nowrap shrink-0">
               Unggah File Gambar
@@ -485,8 +525,8 @@
               <div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 mx-auto flex items-center justify-center text-emerald-300 mb-3 group-focus:scale-105 transition-transform">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
               </div>
-              <p class="text-sm font-semibold text-[#F8FAFC]">Klik di sini, lalu tempel gambar (Ctrl+V / Cmd+V)</p>
-              <p class="text-[11px] text-[#CBD5E1] mt-1">Atau seret &amp; lepas file gambar referensi ke area ini</p>
+              <p class="text-sm font-semibold text-[#ECE5D3]">Klik di sini, lalu tempel gambar (Ctrl+V / Cmd+V)</p>
+              <p class="text-[11px] text-[#A39C8D] mt-1">Atau seret &amp; lepas file gambar referensi ke area ini</p>
             </div>
 
             <!-- Preview & 6 Reference HEX Swatches (3x2 Grid on Desktop) -->
@@ -500,7 +540,7 @@
               </div>
               <p id="ref-image-meta" class="text-[11px] font-mono text-emerald-300">referensi.png • Siap dianalisis</p>
               <div class="text-left space-y-1.5">
-                <span class="block text-[11px] font-medium text-[#CBD5E1]">6 Palet HEX Referensi (klik untuk salin):</span>
+                <span class="block text-[11px] font-medium text-[#A39C8D]">6 Palet HEX Referensi (klik untuk salin):</span>
                 <div id="ref-sampled-swatches" class="grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
               </div>
             </div>
@@ -516,14 +556,14 @@
             <!-- 1. Hasil yang Dibuat -->
             <div class="flex flex-col gap-2 min-w-0">
               <div class="flex items-center justify-between gap-2">
-                <label for="ref-output-type" class="text-xs font-bold text-[#F8FAFC]">Hasil yang Dibuat</label>
+                <label for="ref-output-type" class="text-xs font-bold text-[#ECE5D3]">Hasil yang Dibuat</label>
                 <span id="gemini-featured-pill" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-400/40 whitespace-nowrap shrink-0">
                   ✦ Gemini Image Aktif
                 </span>
               </div>
               <div class="relative w-full">
                 <select id="ref-output-type"
-                  class="w-full appearance-none rounded-xl bg-studioWell border border-sky-500/50 px-3.5 py-2.5 pr-10 text-sm font-medium text-[#F8FAFC] focus:outline-none focus:border-sky-400 transition">
+                  class="w-full appearance-none rounded-xl bg-studioWell border border-sky-500/50 px-3.5 py-2.5 pr-10 text-sm font-medium text-[#ECE5D3] focus:outline-none focus:border-sky-400 transition">
                   <option value="Gambar Desain / Poster Baru (Gemini Image)" selected>✦ Gambar Desain / Poster Baru (Gemini Image)</option>
                   <option value="Edit & Remix Referensi Presisi (Gemini Image / Nano Banana)">✦ Edit &amp; Remix Referensi Presisi (Gemini Image / Nano Banana)</option>
                   <option value="Gambar Desain / Poster Baru (ChatGPT / DALL-E 3)">Gambar Desain / Poster Baru (ChatGPT / DALL-E 3)</option>
@@ -538,24 +578,24 @@
 
             <!-- 2. Rasio Aspek (3x2 Pill Grid on Desktop/Tablet, 2x3 on Narrow Mobile) -->
             <div class="flex flex-col gap-2 min-w-0">
-              <label class="block text-xs font-bold text-[#F8FAFC]">Rasio Aspek</label>
+              <label class="block text-xs font-bold text-[#ECE5D3]">Rasio Aspek</label>
               <div id="ratio-pills" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                <button type="button" data-ratio="1:1" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-indigo-600 text-white border border-indigo-400/50 text-center transition">1:1 (Square)</button>
-                <button type="button" data-ratio="4:5" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#CBD5E1] border border-studioBorder hover:border-indigo-400/40 text-center transition">4:5 (Feed Portrait)</button>
-                <button type="button" data-ratio="9:16" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#CBD5E1] border border-studioBorder hover:border-indigo-400/40 text-center transition">9:16 (Story / Reels)</button>
-                <button type="button" data-ratio="16:9" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#CBD5E1] border border-studioBorder hover:border-indigo-400/40 text-center transition">16:9 (Landscape)</button>
-                <button type="button" data-ratio="3:4" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#CBD5E1] border border-studioBorder hover:border-indigo-400/40 text-center transition">3:4 (Poster)</button>
-                <button type="button" data-ratio="2:3" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#CBD5E1] border border-studioBorder hover:border-indigo-400/40 text-center transition">2:3 (Cetak)</button>
+                <button type="button" data-ratio="1:1" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-indigo-600 text-[#191712] border border-indigo-400/50 text-center transition">1:1 (Square)</button>
+                <button type="button" data-ratio="4:5" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#A39C8D] border border-studioBorder hover:border-indigo-400/40 text-center transition">4:5 (Feed Portrait)</button>
+                <button type="button" data-ratio="9:16" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#A39C8D] border border-studioBorder hover:border-indigo-400/40 text-center transition">9:16 (Story / Reels)</button>
+                <button type="button" data-ratio="16:9" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#A39C8D] border border-studioBorder hover:border-indigo-400/40 text-center transition">16:9 (Landscape)</button>
+                <button type="button" data-ratio="3:4" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#A39C8D] border border-studioBorder hover:border-indigo-400/40 text-center transition">3:4 (Poster)</button>
+                <button type="button" data-ratio="2:3" class="ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#A39C8D] border border-studioBorder hover:border-indigo-400/40 text-center transition">2:3 (Cetak)</button>
               </div>
             </div>
 
             <!-- 3. Jumlah Variasi & Bahasa Output Prompt (2-Column Row) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="min-w-0">
-                <label for="ref-variations-count" class="block text-xs font-bold text-[#F8FAFC] mb-2">Jumlah Variasi</label>
+                <label for="ref-variations-count" class="block text-xs font-bold text-[#ECE5D3] mb-2">Jumlah Variasi</label>
                 <div class="relative">
                   <select id="ref-variations-count"
-                    class="w-full appearance-none rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 pr-9 text-xs sm:text-sm text-[#F8FAFC] focus:outline-none focus:border-indigo-500 transition">
+                    class="w-full appearance-none rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 pr-9 text-xs sm:text-sm text-[#ECE5D3] focus:outline-none focus:border-indigo-500 transition">
                     <option value="1">1 Variasi</option>
                     <option value="2" selected>2 Variasi</option>
                     <option value="3">3 Variasi</option>
@@ -566,10 +606,10 @@
               </div>
 
               <div class="min-w-0">
-                <label for="ref-output-language" class="block text-xs font-bold text-[#F8FAFC] mb-2">Bahasa Output Prompt</label>
+                <label for="ref-output-language" class="block text-xs font-bold text-[#ECE5D3] mb-2">Bahasa Output Prompt</label>
                 <div class="relative">
                   <select id="ref-output-language"
-                    class="w-full appearance-none rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 pr-9 text-xs sm:text-sm text-[#F8FAFC] focus:outline-none focus:border-indigo-500 transition">
+                    class="w-full appearance-none rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 pr-9 text-xs sm:text-sm text-[#ECE5D3] focus:outline-none focus:border-indigo-500 transition">
                     <option value="English (Direkomendasikan untuk Gemini Image & AI)" selected>English (Direkomendasikan untuk Gemini Image &amp; AI)</option>
                     <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                     <option value="Bilingual (EN + ID)">Bilingual (EN + ID)</option>
@@ -584,33 +624,33 @@
               <!-- Column A: Ide atau Perubahan yang Diinginkan -->
               <div class="flex flex-col gap-2 min-w-0">
                 <div class="flex items-center justify-between gap-2">
-                  <label for="ref-idea-input" class="text-xs font-bold text-[#F8FAFC]">Ide atau Perubahan yang Diinginkan</label>
-                  <span class="text-[11px] text-slate-400 whitespace-nowrap">Preset cepat:</span>
+                  <label for="ref-idea-input" class="text-xs font-bold text-[#ECE5D3]">Ide atau Perubahan yang Diinginkan</label>
+                  <span class="text-[11px] text-[#A39C8D] whitespace-nowrap">Preset cepat:</span>
                 </div>
                 <div class="flex flex-wrap gap-1.5">
                   <button type="button" onclick="applyIdeaPreset('Ganti subjek utama menjadi produk skincare botol kaca frosted dengan percikan embun segar, pencahayaan studio dramatis, tetap pertahankan komposisi dan harmoni warna referensi.')"
-                    class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-studioWell hover:bg-indigo-500/20 text-[#CBD5E1] hover:text-indigo-200 border border-studioBorder hover:border-indigo-400/40 whitespace-nowrap transition">
+                    class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-studioWell hover:bg-indigo-500/20 text-[#A39C8D] hover:text-indigo-200 border border-studioBorder hover:border-indigo-400/40 whitespace-nowrap transition">
                     + Produk Studio
                   </button>
                   <button type="button" onclick="applyIdeaPreset('Ubah menjadi poster promo flash sale modern berenergi tinggi dengan elemen 3D mengambang, pencahayaan rim-light neon halus, dan fokus kontras tajam pada teks utama.')"
-                    class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-studioWell hover:bg-sky-500/20 text-[#CBD5E1] hover:text-sky-200 border border-studioBorder hover:border-sky-400/40 whitespace-nowrap transition">
+                    class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-studioWell hover:bg-sky-500/20 text-[#A39C8D] hover:text-sky-200 border border-studioBorder hover:border-sky-400/40 whitespace-nowrap transition">
                     + Promo Flash Sale
                   </button>
                   <button type="button" onclick="applyIdeaPreset('Remix visual menjadi gaya fotografi editorial premium dengan tekstur material mewah, bayangan lembut natural, dan ruang negatif bersih untuk tipografi.')"
-                    class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-studioWell hover:bg-emerald-500/20 text-[#CBD5E1] hover:text-emerald-200 border border-studioBorder hover:border-emerald-400/40 whitespace-nowrap transition">
+                    class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-studioWell hover:bg-emerald-500/20 text-[#A39C8D] hover:text-emerald-200 border border-studioBorder hover:border-emerald-400/40 whitespace-nowrap transition">
                     + Editorial Premium
                   </button>
                 </div>
                 <textarea id="ref-idea-input" rows="4"
                   placeholder="Contoh: Ubah jumlah ilustrasi objek menjadi 7 buah dengan pencahayaan studio dramatis, tetap pertahankan gaya visual dan palet warna referensi..."
-                  class="w-full rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 text-sm text-[#F8FAFC] placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition resize-y"></textarea>
+                  class="w-full rounded-xl bg-studioWell border border-studioBorder px-3.5 py-2.5 text-sm text-[#ECE5D3] placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition resize-y"></textarea>
               </div>
 
               <!-- Column B: Teks yang Harus Tampil di Gambar -->
               <div class="flex flex-col gap-2 min-w-0">
                 <div class="flex items-center justify-between gap-2">
-                  <label for="ref-exact-texts" class="text-xs font-bold text-[#F8FAFC]">
-                    Teks yang Harus Tampil di Gambar <span class="text-slate-400 font-normal">(1 baris = 1 teks persis)</span>
+                  <label for="ref-exact-texts" class="text-xs font-bold text-[#ECE5D3]">
+                    Teks yang Harus Tampil di Gambar <span class="text-[#A39C8D] font-normal">(1 baris = 1 teks persis)</span>
                   </label>
                   <span id="exact-lines-badge" class="text-[11px] font-mono font-semibold text-emerald-300 bg-emerald-500/15 px-2 py-0.5 rounded-md border border-emerald-500/30 whitespace-nowrap shrink-0">0 baris</span>
                 </div>
@@ -625,31 +665,31 @@
 
             <!-- 5. Pertahankan dari Referensi (Horizontal Wrapped Pill Checkboxes, No Vertical Text Wrapping) -->
             <div class="flex flex-col gap-2.5 min-w-0">
-              <label class="block text-xs font-bold text-[#F8FAFC]">Pertahankan dari Referensi</label>
+              <label class="block text-xs font-bold text-[#ECE5D3]">Pertahankan dari Referensi</label>
               <div class="flex flex-wrap gap-2.5">
                 <label class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-studioWell border border-studioBorder hover:border-indigo-400/50 cursor-pointer select-none whitespace-nowrap transition">
                   <input type="checkbox" name="preserve" value="Warna" checked class="w-4 h-4 rounded accent-indigo-500 cursor-pointer shrink-0" />
-                  <span class="text-xs font-semibold text-[#F8FAFC] whitespace-nowrap">Warna</span>
+                  <span class="text-xs font-semibold text-[#ECE5D3] whitespace-nowrap">Warna</span>
                 </label>
                 <label class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-studioWell border border-studioBorder hover:border-indigo-400/50 cursor-pointer select-none whitespace-nowrap transition">
                   <input type="checkbox" name="preserve" value="Tipografi" checked class="w-4 h-4 rounded accent-indigo-500 cursor-pointer shrink-0" />
-                  <span class="text-xs font-semibold text-[#F8FAFC] whitespace-nowrap">Tipografi</span>
+                  <span class="text-xs font-semibold text-[#ECE5D3] whitespace-nowrap">Tipografi</span>
                 </label>
                 <label class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-studioWell border border-studioBorder hover:border-indigo-400/50 cursor-pointer select-none whitespace-nowrap transition">
                   <input type="checkbox" name="preserve" value="Layout" checked class="w-4 h-4 rounded accent-indigo-500 cursor-pointer shrink-0" />
-                  <span class="text-xs font-semibold text-[#F8FAFC] whitespace-nowrap">Layout</span>
+                  <span class="text-xs font-semibold text-[#ECE5D3] whitespace-nowrap">Layout</span>
                 </label>
                 <label class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-studioWell border border-studioBorder hover:border-indigo-400/50 cursor-pointer select-none whitespace-nowrap transition">
                   <input type="checkbox" name="preserve" value="Gaya visual" checked class="w-4 h-4 rounded accent-indigo-500 cursor-pointer shrink-0" />
-                  <span class="text-xs font-semibold text-[#F8FAFC] whitespace-nowrap">Gaya visual</span>
+                  <span class="text-xs font-semibold text-[#ECE5D3] whitespace-nowrap">Gaya visual</span>
                 </label>
                 <label class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-studioWell border border-studioBorder hover:border-indigo-400/50 cursor-pointer select-none whitespace-nowrap transition">
                   <input type="checkbox" name="preserve" value="Animasi" class="w-4 h-4 rounded accent-indigo-500 cursor-pointer shrink-0" />
-                  <span class="text-xs font-semibold text-[#F8FAFC] whitespace-nowrap">Animasi</span>
+                  <span class="text-xs font-semibold text-[#ECE5D3] whitespace-nowrap">Animasi</span>
                 </label>
                 <label class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-studioWell border border-studioBorder hover:border-indigo-400/50 cursor-pointer select-none whitespace-nowrap transition">
                   <input type="checkbox" name="preserve" value="Kamera & transisi" class="w-4 h-4 rounded accent-indigo-500 cursor-pointer shrink-0" />
-                  <span class="text-xs font-semibold text-[#F8FAFC] whitespace-nowrap">Kamera &amp; transisi</span>
+                  <span class="text-xs font-semibold text-[#ECE5D3] whitespace-nowrap">Kamera &amp; transisi</span>
                 </label>
               </div>
             </div>
@@ -657,14 +697,14 @@
             <!-- 6. Dual Action Buttons Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
               <button id="generate-ref-prompt-btn" type="button"
-                class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-xs sm:text-[13px] shadow-indigoGlow transition-all flex items-center justify-center gap-2 disabled:opacity-65 disabled:cursor-not-allowed">
+                class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-[#191712] font-bold text-xs sm:text-[13px] shadow-indigoGlow transition-all flex items-center justify-center gap-2 disabled:opacity-65 disabled:cursor-not-allowed">
                 <svg id="gen-btn-icon" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
                 <svg id="gen-btn-spinner" class="hidden w-4 h-4 animate-spin shrink-0" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
                 <span id="gen-btn-text">Buat Prompt</span>
               </button>
 
               <button id="direct-gemini-image-btn" type="button"
-                class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-extrabold text-xs sm:text-[13px] gemini-glow transition-all flex items-center justify-center gap-2 disabled:opacity-65 disabled:cursor-not-allowed">
+                class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-[#191712] font-extrabold text-xs sm:text-[13px] gemini-glow transition-all flex items-center justify-center gap-2 disabled:opacity-65 disabled:cursor-not-allowed">
                 <svg id="img-gen-icon" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
                 <svg id="img-gen-spinner" class="hidden w-4 h-4 animate-spin shrink-0" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
                 <span id="img-gen-text">Generate Gambar Sekarang (Gemini Image)</span>
@@ -677,35 +717,44 @@
 
             <!-- Direct Gemini Image Generation Gallery Card -->
             <div id="gemini-image-gallery-card" class="hidden studio-panel rounded-2xl overflow-hidden border border-sky-400/40 gemini-glow animate-fade-up">
-                <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+              <div class="px-4 sm:px-5 py-3.5 bg-studioWell border-b border-studioBorder flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                  <h3 class="text-sm font-bold text-[#ECE5D3]">Galeri Hasil Gemini Image</h3>
+                </div>
+                <span id="gemini-gallery-count-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-sky-500/15 text-sky-300 border border-sky-400/30">0 Gambar</span>
               </div>
-              <p class="text-xs sm:text-sm font-semibold text-sky-200">Merender gambar resolusi tinggi dengan Gemini Image...</p>
-              <p class="text-[11px] text-[#CBD5E1]">Mengunci komposisi referensi, tipografi eksak, dan rasio aspek pilihan Anda.</p>
-            </div>
 
-            <!-- Friendly Error Box Inside Gallery -->
-            <div id="gemini-image-error-box" class="hidden p-5 bg-rose-500/10 border-b border-rose-500/25">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-rose-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
-                <div class="space-y-1">
-                  <h4 class="text-xs font-bold text-rose-200">Info Pembuatan Gambar Gemini Image</h4>
-                  <p id="gemini-image-error-text" class="text-xs text-rose-200/90 leading-relaxed"></p>
+              <!-- Loading State Inside Gallery -->
+              <div id="gemini-image-loading-box" class="hidden p-8 sm:p-12 text-center bg-black/20 flex flex-col items-center justify-center gap-3">
+                <svg class="w-5 h-5 animate-spin text-sky-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                <p class="text-xs sm:text-sm font-semibold text-sky-200">Merender gambar resolusi tinggi dengan Gemini Image...</p>
+                <p class="text-[11px] text-[#A39C8D]">Mengunci komposisi referensi, tipografi eksak, dan rasio aspek pilihan Anda.</p>
+              </div>
+
+              <!-- Friendly Error Box Inside Gallery -->
+              <div id="gemini-image-error-box" class="hidden p-5 bg-rose-500/10 border-b border-rose-500/25">
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-rose-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+                  <div class="space-y-1">
+                    <h4 class="text-xs font-bold text-rose-200">Info Pembuatan Gambar Gemini Image</h4>
+                    <p id="gemini-image-error-text" class="text-xs text-rose-200/90 leading-relaxed"></p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Generated Images Grid -->
-            <div id="gemini-generated-images-grid" class="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
-          </div>
+              <!-- Generated Images Grid -->
+              <div id="gemini-generated-images-grid" class="p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+            </div>
 
           <!-- Empty State -->
           <div id="generator-empty-state" class="studio-panel rounded-2xl p-8 sm:p-12 text-center border-dashed">
             <div class="w-14 h-14 rounded-2xl bg-sky-500/15 border border-sky-400/30 mx-auto flex items-center justify-center text-sky-300 mb-4">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
             </div>
-            <h3 id="empty-output-title" class="text-base sm:text-lg font-bold text-[#F8FAFC]">Variasi Prompt Gemini Image Siap Pakai</h3>
-            <p id="empty-output-desc" class="text-xs sm:text-sm text-[#CBD5E1] max-w-lg mx-auto mt-2 leading-relaxed">
-              Tempel gambar referensi (<kbd class="px-1.5 py-0.5 rounded bg-studioWell border border-studioBorder text-[#F8FAFC] font-mono text-[11px]">Ctrl+V</kbd>), atur elemen yang dipertahankan, tulis teks persis per baris, lalu klik <strong class="text-indigo-300">Buat Prompt</strong> atau <strong class="text-sky-300">Generate Gambar Sekarang (Gemini Image)</strong>.
+            <h3 id="empty-output-title" class="text-base sm:text-lg font-bold text-[#ECE5D3]">Variasi Prompt Gemini Image Siap Pakai</h3>
+            <p id="empty-output-desc" class="text-xs sm:text-sm text-[#A39C8D] max-w-lg mx-auto mt-2 leading-relaxed">
+              Tempel gambar referensi (<kbd class="px-1.5 py-0.5 rounded bg-studioWell border border-studioBorder text-[#ECE5D3] font-mono text-[11px]">Ctrl+V</kbd>), atur elemen yang dipertahankan, tulis teks persis per baris, lalu klik <strong class="text-indigo-300">Buat Prompt</strong> atau <strong class="text-sky-300">Generate Gambar Sekarang (Gemini Image)</strong>.
             </p>
           </div>
 
@@ -714,7 +763,7 @@
             <div class="studio-panel rounded-2xl px-4 sm:px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
               <div class="flex flex-wrap items-center gap-2.5">
                 <span id="target-engine-dot" class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
-                <h3 id="output-panel-title" class="text-sm font-bold text-[#F8FAFC]">Hasil Prompt Gemini Image</h3>
+                <h3 id="output-panel-title" class="text-sm font-bold text-[#ECE5D3]">Hasil Prompt Gemini Image</h3>
                 <span id="target-engine-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-400/35">Gemini Image Ready</span>
                 <span id="variations-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/25">2 Variasi</span>
               </div>
@@ -897,7 +946,7 @@
     }
 
     // Color math utilities for HEX validation & WCAG contrast ratio
-    function normalizeHex(val, fallback = '#6366F1') {
+    function normalizeHex(val, fallback = '#E3A72F') {
       if (!val) return fallback;
       const match = String(val).match(/#[0-9A-Fa-f]{6}\b/);
       return match ? match[0].toUpperCase() : fallback;
@@ -1080,12 +1129,12 @@
 
         // Fill up to 6 swatches if image is monochromatic
         const fallbacks = [
-          { hex: '#0B0F19', name: 'Hitam Pekat', rawCount: 1 },
-          { hex: '#6366F1', name: 'Biru Indigo', rawCount: 1 },
-          { hex: '#10B981', name: 'Hijau Zamrud', rawCount: 1 },
-          { hex: '#F8FAFC', name: 'Putih Bersih', rawCount: 1 },
-          { hex: '#38BDF8', name: 'Cyan Langit', rawCount: 1 },
-          { hex: '#F59E0B', name: 'Oranye Amber', rawCount: 1 }
+          { hex: '#191712', name: 'Hitam Latar', rawCount: 1 },
+          { hex: '#E3A72F', name: 'Kuning Aksen', rawCount: 1 },
+          { hex: '#86A98F', name: 'Hijau Pendukung', rawCount: 1 },
+          { hex: '#ECE5D3', name: 'Putih Teks', rawCount: 1 },
+          { hex: '#232019', name: 'Hitam Kartu', rawCount: 1 },
+          { hex: '#0E0D0A', name: 'Hitam Kode', rawCount: 1 }
         ];
         let fbIdx = 0;
         while (distinct.length < 6) {
@@ -1119,12 +1168,12 @@
         };
       } catch (e) {
         const defaultColors = [
-          { hex: '#0B0F19', name: 'Hitam Pekat', pct: 34 },
-          { hex: '#131A2A', name: 'Biru Navy', pct: 24 },
-          { hex: '#6366F1', name: 'Biru Indigo', pct: 16 },
-          { hex: '#10B981', name: 'Hijau Zamrud', pct: 12 },
-          { hex: '#F8FAFC', name: 'Putih Bersih', pct: 8 },
-          { hex: '#38BDF8', name: 'Cyan Langit', pct: 6 }
+          { hex: '#191712', name: 'Hitam Latar', pct: 34 },
+          { hex: '#232019', name: 'Hitam Kartu', pct: 24 },
+          { hex: '#E3A72F', name: 'Kuning Aksen', pct: 16 },
+          { hex: '#86A98F', name: 'Hijau Pendukung', pct: 12 },
+          { hex: '#ECE5D3', name: 'Putih Teks', pct: 8 },
+          { hex: '#383428', name: 'Cokelat Border', pct: 6 }
         ];
         return {
           hexes: defaultColors.map((c) => c.hex),
@@ -1166,6 +1215,18 @@
         dimensions: `${origW}×${origH}px`,
         aspectRatio: simplifyAspectRatio(origW, origH)
       };
+    }
+
+    // Helper to seek video and wait for 'seeked' event
+    function seekVideoToTime(videoEl, time) {
+      return new Promise((resolve) => {
+        const onSeeked = () => {
+          videoEl.removeEventListener('seeked', onSeeked);
+          resolve();
+        };
+        videoEl.addEventListener('seeked', onSeeked);
+        videoEl.currentTime = time;
+      });
     }
 
     // Extracts 4 keyframes (0%, 33%, 66%, 100%) from HTML5 video element
@@ -1220,7 +1281,7 @@
         durationSec: duration,
         dimensions: `${origW}×${origH}px`,
         aspectRatio: simplifyAspectRatio(origW, origH),
-        sampledHexes: frames[0]?.hexes || ['#0B0F19', '#6366F1', '#10B981', '#F8FAFC', '#38BDF8', '#F59E0B'],
+        sampledHexes: frames[0]?.hexes || ['#191712', '#E3A72F', '#86A98F', '#ECE5D3', '#232019', '#383428'],
         sampledColors: frames[0]?.sampledColors || [],
         isDarkTheme: frames[0]?.isDarkTheme ?? true
       };
@@ -1237,8 +1298,8 @@
           class="flex items-center gap-1.5 px-2 py-1.5 rounded-lg bg-studioCard border border-studioBorder hover:border-emerald-400/60 transition text-left group">
           <span class="w-3.5 h-3.5 rounded-sm border border-white/25 shrink-0" style="background-color: ${c.hex};"></span>
           <div class="min-w-0">
-            <div class="text-[10px] font-mono font-semibold text-[#F8FAFC] group-hover:text-emerald-300 truncate">${c.hex}</div>
-            ${c.name ? `<div class="text-[9px] text-slate-400 truncate">${escapeHtml(c.name)}${c.pct ? ` • ${c.pct}%` : ''}</div>` : ''}
+            <div class="text-[10px] font-mono font-semibold text-[#ECE5D3] group-hover:text-emerald-300 truncate">${c.hex}</div>
+            ${c.name ? `<div class="text-[9px] text-[#A39C8D] truncate">${escapeHtml(c.name)}${c.pct ? ` • ${c.pct}%` : ''}</div>` : ''}
           </div>
         </button>
       `).join('');
@@ -1263,8 +1324,8 @@
       const refImageCard = document.getElementById('ref-image-card');
       const generatorRightStack = document.getElementById('generator-right-stack');
 
-      const activeClass = 'flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all bg-indigo-600 text-white shadow-sm';
-      const inactiveClass = 'flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-[#CBD5E1] hover:text-white';
+      const activeClass = 'flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all bg-indigo-600 text-[#191712] shadow-sm';
+      const inactiveClass = 'flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-[#A39C8D] hover:text-[#ECE5D3]';
 
       btnSplit.className = mode === 'split' ? activeClass : inactiveClass;
       btnAnalyzer.className = mode === 'analyzer' ? activeClass : inactiveClass;
@@ -1309,9 +1370,9 @@
       state.resultViewMode = mode;
       document.querySelectorAll('.result-view-btn').forEach((btn) => {
         if (btn.getAttribute('data-result-view') === mode) {
-          btn.className = 'result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition';
+          btn.className = 'result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-[#191712] transition';
         } else {
-          btn.className = 'result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-[#CBD5E1] hover:text-white transition';
+          btn.className = 'result-view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-[#A39C8D] hover:text-[#ECE5D3] transition';
         }
       });
 
@@ -1474,7 +1535,7 @@
                 <img src="${kf.dataUrl}" alt="${escapeHtml(kf.label)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
               <div class="px-1.5 py-1">
-                <div class="text-[10px] font-semibold text-[#F8FAFC] truncate">${escapeHtml(kf.label)}</div>
+                <div class="text-[10px] font-semibold text-[#ECE5D3] truncate">${escapeHtml(kf.label)}</div>
                 <div class="text-[9px] font-mono text-emerald-300">${escapeHtml(kf.timestamp)}</div>
               </div>
             </button>
@@ -1497,18 +1558,172 @@
       showToast(`Keyframe ${kf.label} (${kf.timestamp}) dipilih.`, 'info');
     }
 
+    document.getElementById('analyzer-url-btn').addEventListener('click', async () => {
+      const url = document.getElementById('analyzer-url-input').value.trim();
+      if (!url) return;
+
+      const lowerUrl = url.toLowerCase();
+      if (lowerUrl.includes('tiktok.com') || lowerUrl.includes('instagram.com') || lowerUrl.includes('facebook.com') || lowerUrl.includes('x.com') || lowerUrl.includes('twitter.com')) {
+        showToast('Platform media sosial ini memblokir akses link langsung. Silakan unduh videonya dan unggah file secara manual.', 'error');
+        return;
+      }
+
+      showToast('Memproses link media...', 'info');
+
+      // YouTube extraction
+      const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
+      if (ytMatch && ytMatch[1]) {
+        const videoId = ytMatch[1];
+        // Menggunakan public CORS proxy untuk mengambil gambar dari YouTube
+        const thumbUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`)}`;
+        
+        const img = new Image();
+        img.crossOrigin = "Anonymous";
+        img.onload = () => {
+          const processed = processImageElementToCanvas(img);
+          state.analyzerMedia = {
+            type: 'image',
+            name: `youtube-${videoId}.jpg`,
+            keyframes: [],
+            durationSec: 0,
+            ...processed
+          };
+          analyzerDropzone.classList.add('hidden');
+          document.getElementById('analyzer-url-container').classList.add('hidden');
+          analyzerPreviewWrapper.classList.remove('hidden');
+          analyzerVideoPreview.classList.add('hidden');
+          document.getElementById('video-keyframes-section').classList.add('hidden');
+          analyzerImagePreview.src = processed.dataUrl;
+          analyzerImagePreview.classList.remove('hidden');
+          
+          document.getElementById('analyzer-media-badge').textContent = 'YT THUMB';
+          document.getElementById('analyzer-media-meta').textContent = `${state.analyzerMedia.name} (${processed.dimensions} • ${processed.aspectRatio})`;
+          document.getElementById('analyzer-luminance-badge').textContent = processed.isDarkTheme ? 'Nuansa Gelap' : 'Nuansa Terang';
+          renderSixSwatches('analyzer-sampled-swatches', processed.sampledColors);
+          document.getElementById('sync-from-tab1-btn').classList.remove('hidden');
+          showToast('Thumbnail resolusi tinggi YouTube berhasil dimuat!', 'success');
+        };
+        img.onerror = () => {
+          showToast('Gagal memuat thumbnail YouTube (video mungkin dibatasi/pribadi).', 'error');
+        };
+        img.src = thumbUrl;
+        return;
+      }
+
+      // Direct video link (.mp4, .webm, etc)
+      if (lowerUrl.match(/\.(mp4|webm|mov)$/)) {
+        analyzerDropzone.classList.add('hidden');
+        document.getElementById('analyzer-url-container').classList.add('hidden');
+        analyzerImagePreview.classList.add('hidden');
+        
+        analyzerVideoPreview.crossOrigin = "Anonymous";
+        analyzerVideoPreview.src = url;
+        analyzerVideoPreview.classList.remove('hidden');
+        analyzerPreviewWrapper.classList.remove('hidden');
+        showToast('Memuat video dari URL...', 'info');
+        
+        analyzerVideoPreview.onloadedmetadata = async () => {
+          try {
+            const videoData = await extractFourVideoKeyframes(analyzerVideoPreview);
+            state.analyzerMedia = {
+              type: 'video',
+              name: 'url-video.mp4',
+              base64Jpeg: videoData.frames[0]?.base64Jpeg || null,
+              dataUrl: videoData.frames[0]?.dataUrl || null,
+              keyframes: videoData.frames,
+              sampledHexes: videoData.sampledHexes,
+              sampledColors: videoData.sampledColors,
+              dimensions: videoData.dimensions,
+              aspectRatio: videoData.aspectRatio,
+              isDarkTheme: videoData.isDarkTheme,
+              durationSec: videoData.durationSec
+            };
+
+            document.getElementById('analyzer-media-badge').textContent = 'VIDEO URL';
+            document.getElementById('analyzer-media-meta').textContent = `url-video.mp4 (${videoData.dimensions} • ${videoData.aspectRatio})`;
+            document.getElementById('analyzer-luminance-badge').textContent = videoData.isDarkTheme ? 'Nuansa Gelap' : 'Nuansa Terang';
+            renderSixSwatches('analyzer-sampled-swatches', videoData.sampledColors);
+            document.getElementById('sync-from-tab1-btn').classList.remove('hidden');
+
+            const kfSection = document.getElementById('video-keyframes-section');
+            const kfGrid = document.getElementById('video-keyframes-grid');
+            document.getElementById('video-duration-label').textContent = `Durasi ${videoData.durationSec.toFixed(1)}s`;
+            kfSection.classList.remove('hidden');
+
+            kfGrid.innerHTML = videoData.frames.map((kf, idx) => `
+              <button type="button" onclick="inspectVideoKeyframe(${idx})"
+                class="group rounded-xl overflow-hidden border border-studioBorder hover:border-emerald-400 bg-studioCard text-left transition">
+                <div class="aspect-video bg-black overflow-hidden">
+                  <img src="${kf.dataUrl}" alt="${escapeHtml(kf.label)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                </div>
+                <div class="px-1.5 py-1">
+                  <div class="text-[10px] font-semibold text-[#ECE5D3] truncate">${escapeHtml(kf.label)}</div>
+                  <div class="text-[9px] font-mono text-emerald-300">${escapeHtml(kf.timestamp)}</div>
+                </div>
+              </button>
+            `).join('');
+
+            showToast('4 keyframe video berhasil diekstrak dari URL!', 'success');
+          } catch(e) {
+             showToast('Server video menolak ekstraksi keyframe (CORS). Silakan unggah filenya.', 'error');
+             document.getElementById('analyzer-clear-btn').click();
+          }
+        };
+        analyzerVideoPreview.onerror = () => {
+          showToast('Gagal memuat video dari link ini. Server memblokir akses langsung (CORS).', 'error');
+          document.getElementById('analyzer-clear-btn').click();
+        };
+        return;
+      }
+
+      // Direct image link
+      const img = new Image();
+      img.crossOrigin = "Anonymous";
+      img.onload = () => {
+        const processed = processImageElementToCanvas(img);
+        state.analyzerMedia = {
+          type: 'image',
+          name: 'url-image.jpg',
+          keyframes: [],
+          durationSec: 0,
+          ...processed
+        };
+        analyzerDropzone.classList.add('hidden');
+        document.getElementById('analyzer-url-container').classList.add('hidden');
+        analyzerPreviewWrapper.classList.remove('hidden');
+        analyzerVideoPreview.classList.add('hidden');
+        document.getElementById('video-keyframes-section').classList.add('hidden');
+        analyzerImagePreview.src = processed.dataUrl;
+        analyzerImagePreview.classList.remove('hidden');
+        
+        document.getElementById('analyzer-media-badge').textContent = 'IMG URL';
+        document.getElementById('analyzer-media-meta').textContent = `${state.analyzerMedia.name} (${processed.dimensions} • ${processed.aspectRatio})`;
+        document.getElementById('analyzer-luminance-badge').textContent = processed.isDarkTheme ? 'Nuansa Gelap' : 'Nuansa Terang';
+        renderSixSwatches('analyzer-sampled-swatches', processed.sampledColors);
+        document.getElementById('sync-from-tab1-btn').classList.remove('hidden');
+        showToast('Gambar dari URL berhasil dimuat!', 'success');
+      };
+      img.onerror = () => {
+        showToast('Gagal memuat gambar. Server menolak akses langsung (CORS). Silakan unduh dan unggah manual.', 'error');
+      };
+      // Gunakan proxy public agar gambar dari luar domain bisa digambar ke Canvas
+      img.src = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+    });
+
     document.getElementById('analyzer-clear-btn').addEventListener('click', () => {
       state.analyzerMedia = {
         type: null, name: '', base64Jpeg: null, keyframes: [], dataUrl: null,
         sampledHexes: [], sampledColors: [], dimensions: '', aspectRatio: '', isDarkTheme: true, durationSec: 0
       };
       analyzerFileInput.value = '';
+      document.getElementById('analyzer-url-input').value = '';
       analyzerImagePreview.src = '';
       analyzerVideoPreview.pause();
-      analyzerVideoPreview.src = '';
+      analyzerVideoPreview.removeAttribute('src');
       analyzerPreviewWrapper.classList.add('hidden');
       document.getElementById('video-keyframes-section').classList.add('hidden');
       analyzerDropzone.classList.remove('hidden');
+      document.getElementById('analyzer-url-container').classList.remove('hidden');
     });
 
     // Sample Creative Asset Generator
@@ -1519,69 +1734,69 @@
       const ctx = canvas.getContext('2d');
 
       const bgGrad = ctx.createLinearGradient(0, 0, 720, 1280);
-      bgGrad.addColorStop(0, '#0B0F19');
-      bgGrad.addColorStop(0.5, '#191C3A');
-      bgGrad.addColorStop(1, '#0B1324');
+      bgGrad.addColorStop(0, '#191712');
+      bgGrad.addColorStop(0.5, '#232019');
+      bgGrad.addColorStop(1, '#0E0D0A');
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, 720, 1280);
 
       const glow1 = ctx.createRadialGradient(540, 280, 20, 540, 280, 340);
-      glow1.addColorStop(0, 'rgba(99, 102, 241, 0.42)');
-      glow1.addColorStop(1, 'rgba(99, 102, 241, 0)');
+      glow1.addColorStop(0, 'rgba(227, 167, 47, 0.42)');
+      glow1.addColorStop(1, 'rgba(227, 167, 47, 0)');
       ctx.fillStyle = glow1;
       ctx.fillRect(0, 0, 720, 1280);
 
       const glow2 = ctx.createRadialGradient(180, 900, 20, 180, 900, 320);
-      glow2.addColorStop(0, 'rgba(16, 185, 129, 0.34)');
-      glow2.addColorStop(1, 'rgba(16, 185, 129, 0)');
+      glow2.addColorStop(0, 'rgba(134, 169, 143, 0.34)');
+      glow2.addColorStop(1, 'rgba(134, 169, 143, 0)');
       ctx.fillStyle = glow2;
       ctx.fillRect(0, 0, 720, 1280);
 
       // Eyebrow badge
-      ctx.fillStyle = 'rgba(16, 185, 129, 0.16)';
+      ctx.fillStyle = 'rgba(134, 169, 143, 0.16)';
       ctx.beginPath();
       ctx.roundRect(64, 96, 265, 44, 22);
       ctx.fill();
-      ctx.strokeStyle = '#10B981';
+      ctx.strokeStyle = '#86A98F';
       ctx.lineWidth = 2;
       ctx.stroke();
-      ctx.fillStyle = '#6EE7B7';
+      ctx.fillStyle = '#94B89F';
       ctx.font = '700 18px "Inter", sans-serif';
       ctx.fillText('EDISI TERBATAS 2026', 92, 124);
 
       // Headline
-      ctx.fillStyle = '#F8FAFC';
+      ctx.fillStyle = '#ECE5D3';
       ctx.font = '800 66px "Inter", sans-serif';
       ctx.fillText('UPGRADE', 64, 245);
-      ctx.fillStyle = '#818CF8';
+      ctx.fillStyle = '#E3A72F';
       ctx.fillText('WORKFLOW', 64, 322);
-      ctx.fillStyle = '#F8FAFC';
+      ctx.fillStyle = '#ECE5D3';
       ctx.fillText('KREATIFMU', 64, 399);
 
       // Product showcase card
-      ctx.fillStyle = 'rgba(19, 26, 42, 0.88)';
+      ctx.fillStyle = 'rgba(35, 32, 25, 0.88)';
       ctx.beginPath();
       ctx.roundRect(64, 465, 592, 390, 28);
       ctx.fill();
-      ctx.strokeStyle = '#334155';
+      ctx.strokeStyle = '#383428';
       ctx.lineWidth = 2;
       ctx.stroke();
 
       // Minimalist geometric audio/studio emblem
-      ctx.strokeStyle = '#6366F1';
+      ctx.strokeStyle = '#E3A72F';
       ctx.lineWidth = 18;
       ctx.beginPath();
       ctx.arc(360, 660, 115, Math.PI * 0.85, Math.PI * 2.15);
       ctx.stroke();
 
-      ctx.fillStyle = '#10B981';
+      ctx.fillStyle = '#86A98F';
       ctx.beginPath();
       ctx.roundRect(220, 635, 38, 92, 16);
       ctx.roundRect(462, 635, 38, 92, 16);
       ctx.fill();
 
       // Subtitle pill
-      ctx.fillStyle = 'rgba(9, 13, 22, 0.92)';
+      ctx.fillStyle = 'rgba(14, 13, 10, 0.92)';
       ctx.beginPath();
       ctx.roundRect(95, 905, 530, 58, 16);
       ctx.fill();
@@ -1591,13 +1806,13 @@
 
       // CTA Button
       const ctaGrad = ctx.createLinearGradient(64, 1015, 656, 1095);
-      ctaGrad.addColorStop(0, '#6366F1');
-      ctaGrad.addColorStop(1, '#10B981');
+      ctaGrad.addColorStop(0, '#E3A72F');
+      ctaGrad.addColorStop(1, '#86A98F');
       ctx.fillStyle = ctaGrad;
       ctx.beginPath();
       ctx.roundRect(64, 1015, 592, 80, 20);
       ctx.fill();
-      ctx.fillStyle = '#FFFFFF';
+      ctx.fillStyle = '#191712';
       ctx.font = '700 26px "Inter", sans-serif';
       ctx.fillText('COBA SEKARANG GRATIS  ->', 175, 1064);
 
@@ -1632,18 +1847,18 @@
       document.getElementById('sync-from-tab1-btn').classList.remove('hidden');
 
       const sampleAnalysis = {
-        ringkasan: 'Desain kampanye vertikal 9:16 bergaya Dark Creative Studio dengan kontras tinggi antara latar gelap (#0B0F19) dan tipografi display putih bersih (#F8FAFC) yang dipadukan aksen indigo (#6366F1) serta emerald (#10B981). Komposisi memandu mata secara vertikal dari badge penawaran di atas menuju headline 3 baris, kartu fokus produk, subtitle kuning kontras, hingga tombol CTA penuh di zona bawah.',
+        ringkasan: 'Desain kampanye vertikal 9:16 bergaya Dark Creative Studio dengan kontras tinggi antara latar gelap (#191712) dan tipografi display cerah (#ECE5D3) yang dipadukan aksen kuning (#E3A72F) serta hijau pendukung (#86A98F). Komposisi memandu mata secara vertikal dari badge penawaran di atas menuju headline 3 baris, kartu fokus produk, subtitle cerah kontras, hingga tombol CTA penuh di zona bawah.',
         warna: {
-          warnaFontUtama: '#F8FAFC',
-          warnaFontSekunder: '#818CF8',
-          warnaLatar: '#0B0F19',
-          warnaAksenTombol: '#10B981',
+          warnaFontUtama: '#ECE5D3',
+          warnaFontSekunder: '#E3A72F',
+          warnaLatar: '#191712',
+          warnaAksenTombol: '#E3A72F',
           warnaSubtitleHighlight: '#FDE047',
           analisisKontras: 'Kontras teks utama terhadap latar mencapai 17.8:1 (WCAG AAA), sangat tajam untuk layar smartphone.'
         },
         animasi: {
           animasiTeks: 'Kinetic slide-up bertahap per baris (stagger 110ms) dengan kurva cubic-bezier(0.16, 1, 0.3, 1) dan overshoot halus 2%',
-          animasiGrafis: 'Floating levitation lembut pada kartu produk utama disertai ambient glow pulse pada aksen indigo & emerald',
+          animasiGrafis: 'Floating levitation lembut pada kartu produk utama disertai ambient glow pulse pada aksen',
           efekMasukKeluar: 'Masuk dengan scale-in 94% ke 100% (durasi 380ms); keluar dengan clean upward wipe 220ms'
         },
         gerakanKamera: {
@@ -1651,19 +1866,19 @@
           sudutFraming: 'Eye-level center-weighted vertical 9:16 dengan safe-zone margin 12% di tepi atas dan bawah'
         },
         transisiAntarScene: {
-          jenisTransisi: 'Single Frame / Gambar Statis (Rekomendasi jika dianimasikan ke video: Whip-Pan vertikal cepat 6 frame dengan light-sweep emerald)',
+          jenisTransisi: 'Single Frame / Gambar Statis (Rekomendasi jika dianimasikan ke video: Whip-Pan vertikal cepat 6 frame)',
           tempoPacing: 'Tempo cepat berenergi tinggi (pergantian beat visual tiap 2.0 detik)'
         },
         cta: {
           teksCta: 'COBA SEKARANG GRATIS ->',
           posisiTombol: 'Zona bawah tengah (lower-third, 82% dari atas frame) agar mudah dijangkau ibu jari',
-          warnaTombol: '#10B981',
+          warnaTombol: '#E3A72F',
           strategiKonversi: 'Kombinasi kata kerja langsung ("COBA SEKARANG") + penghilang hambatan ("GRATIS")'
         },
         subtitle: {
-          gayaFont: 'Plus Jakarta Sans ExtraBold, geometric sans-serif modern dengan tracking rapat (-0.02em)',
+          gayaFont: 'Inter ExtraBold, geometric sans-serif modern dengan tracking rapat (-0.02em)',
           hierarkiUkuran: 'Eyebrow Badge 18pt -> Headline Display 66pt -> Subtitle 22pt -> CTA 26pt',
-          warnaTeksDanLatar: 'Teks kuning cerah (#FDE047) di atas pill gelap pekat (#090D16) opasitas 92%',
+          warnaTeksDanLatar: 'Teks kuning cerah (#FDE047) di atas pill gelap pekat (#0E0D0A) opasitas 92%',
           teksTerbaca: 'EDISI TERBATAS 2026 | UPGRADE WORKFLOW KREATIFMU | "Desain presisi dalam hitungan detik" | COBA SEKARANG GRATIS'
         },
         efekSuara: {
@@ -1797,7 +2012,7 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
                 type: 'OBJECT',
                 properties: {
                   tipeGerakan: { type: 'STRING' },
-                  sudutFraming: { type: 'STRING' }
+                  sudutFraming: { type: 'STRING' },
                 },
                 required: ['tipeGerakan', 'sudutFraming']
               },
@@ -1847,11 +2062,11 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
     }
 
     function buildLocalCanvasFallbackAnalysis(media, platform, notes) {
-      const hexes = media.sampledHexes || ['#0B0F19', '#6366F1', '#10B981', '#F8FAFC', '#38BDF8', '#F59E0B'];
-      const bgHex = media.isDarkTheme ? hexes[0] : '#F8FAFC';
-      const primaryFontHex = media.isDarkTheme ? '#F8FAFC' : '#0F172A';
-      const secondaryFontHex = hexes[2] || '#818CF8';
-      const accentHex = hexes[1] || '#6366F1';
+      const hexes = media.sampledHexes || ['#191712', '#E3A72F', '#86A98F', '#ECE5D3', '#232019', '#383428'];
+      const bgHex = media.isDarkTheme ? hexes[0] : '#ECE5D3';
+      const primaryFontHex = media.isDarkTheme ? '#ECE5D3' : '#191712';
+      const secondaryFontHex = hexes[2] || '#86A98F';
+      const accentHex = hexes[1] || '#E3A72F';
       const ratioVal = getContrastRatio(primaryFontHex, bgHex);
       const isVideo = media.type === 'video';
 
@@ -1885,9 +2100,9 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           strategiKonversi: 'Kontras tombol tinggi dengan ajakan bertindak yang ringkas dan jelas'
         },
         subtitle: {
-          gayaFont: 'Plus Jakarta Sans Bold / Geometric Sans-Serif modern, tracking rapat (-0.02em)',
+          gayaFont: 'Inter Bold / Geometric Sans-Serif modern, tracking rapat (-0.02em)',
           hierarkiUkuran: 'Judul Utama (Display Bold) -> Subjudul Pendukung -> Caption Subtitle -> Tombol CTA',
-          warnaTeksDanLatar: 'Teks putih (#F8FAFC) dengan highlight kata kunci (#FDE047) di atas kotak gelap semi-transparan (#090D16)',
+          warnaTeksDanLatar: 'Teks cerah (#ECE5D3) dengan highlight kata kunci (#FDE047) di atas kotak gelap pekat (#0E0D0A)',
           teksTerbaca: 'Judul utama dan elemen ajakan bertindak sesuai komposisi visual referensi'
         },
         efekSuara: {
@@ -1902,10 +2117,10 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
       state.analyzerResult = clean;
 
       const c = clean.warna || {};
-      const fontUtama = normalizeHex(c.warnaFontUtama, '#F8FAFC');
-      const fontSekunder = normalizeHex(c.warnaFontSekunder, '#818CF8');
-      const warnaLatar = normalizeHex(c.warnaLatar, '#0B0F19');
-      const warnaAksenTombol = normalizeHex(c.warnaAksenTombol, '#10B981');
+      const fontUtama = normalizeHex(c.warnaFontUtama, '#ECE5D3');
+      const fontSekunder = normalizeHex(c.warnaFontSekunder, '#E3A72F');
+      const warnaLatar = normalizeHex(c.warnaLatar, '#191712');
+      const warnaAksenTombol = normalizeHex(c.warnaAksenTombol, '#E3A72F');
       const warnaSubtitleHighlight = normalizeHex(c.warnaSubtitleHighlight, '#FDE047');
       const contrastRatio = getContrastRatio(fontUtama, warnaLatar);
 
@@ -1999,11 +2214,11 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300 font-mono text-xs font-bold">01</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Ringkasan</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Ringkasan</h4>
             </div>
             <span class="text-[11px] font-mono text-slate-400">KONSEP &amp; MOOD</span>
           </div>
-          <p class="text-xs sm:text-[13px] text-[#CBD5E1] leading-relaxed">${escapeHtml(specObject.ringkasan)}</p>
+          <p class="text-xs sm:text-[13px] text-[#A39C8D] leading-relaxed">${escapeHtml(specObject.ringkasan)}</p>
         </article>
 
         <!-- 2. Warna (Hex & Peran) -->
@@ -2011,7 +2226,7 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 font-mono text-xs font-bold">02</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Warna (Hex &amp; Peran)</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Warna (Hex &amp; Peran)</h4>
             </div>
             <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-300 font-mono text-[11px] font-semibold">Kontras ${escapeHtml(specObject.warna.rasioKontrasFontUtama)}</span>
           </div>
@@ -2021,13 +2236,13 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
                 class="flex items-center gap-2 p-2 rounded-xl bg-studioWell border border-studioBorder hover:border-emerald-400/60 transition text-left group">
                 <span class="w-5 h-5 rounded-md border border-white/25 shrink-0" style="background-color: ${s.hex};"></span>
                 <div class="min-w-0">
-                  <div class="text-[10px] text-[#CBD5E1] truncate">${escapeHtml(s.role)}</div>
-                  <div class="text-xs font-mono font-bold text-[#F8FAFC] group-hover:text-emerald-300">${s.hex}</div>
+                  <div class="text-[10px] text-[#A39C8D] truncate">${escapeHtml(s.role)}</div>
+                  <div class="text-xs font-mono font-bold text-[#ECE5D3] group-hover:text-emerald-300">${s.hex}</div>
                 </div>
               </button>
             `).join('')}
           </div>
-          <p class="text-[11px] text-[#CBD5E1] leading-relaxed">${escapeHtml(specObject.warna.analisisKontras)}</p>
+          <p class="text-[11px] text-[#A39C8D] leading-relaxed">${escapeHtml(specObject.warna.analisisKontras)}</p>
         </article>
 
         <!-- 3. Animasi -->
@@ -2035,14 +2250,14 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-violet-500/20 border border-violet-400/30 flex items-center justify-center text-violet-300 font-mono text-xs font-bold">03</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Animasi</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Animasi</h4>
             </div>
             <span class="text-[11px] font-mono text-slate-400">MOTION &amp; EASING</span>
           </div>
-          <ul class="space-y-1.5 text-xs text-[#CBD5E1] leading-relaxed">
-            <li><strong class="text-[#F8FAFC]">Animasi Teks:</strong> ${escapeHtml(specObject.animasi.animasiTeks)}</li>
-            <li><strong class="text-[#F8FAFC]">Elemen Grafis:</strong> ${escapeHtml(specObject.animasi.animasiGrafis)}</li>
-            <li><strong class="text-[#F8FAFC]">Masuk / Keluar:</strong> ${escapeHtml(specObject.animasi.efekMasukKeluar)}</li>
+          <ul class="space-y-1.5 text-xs text-[#A39C8D] leading-relaxed">
+            <li><strong class="text-[#ECE5D3]">Animasi Teks:</strong> ${escapeHtml(specObject.animasi.animasiTeks)}</li>
+            <li><strong class="text-[#ECE5D3]">Elemen Grafis:</strong> ${escapeHtml(specObject.animasi.animasiGrafis)}</li>
+            <li><strong class="text-[#ECE5D3]">Masuk / Keluar:</strong> ${escapeHtml(specObject.animasi.efekMasukKeluar)}</li>
           </ul>
         </article>
 
@@ -2051,13 +2266,13 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-300 font-mono text-xs font-bold">04</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Gerakan Kamera</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Gerakan Kamera</h4>
             </div>
             <span class="text-[11px] font-mono text-slate-400">CAMERA &amp; FRAMING</span>
           </div>
-          <ul class="space-y-1.5 text-xs text-[#CBD5E1] leading-relaxed">
-            <li><strong class="text-[#F8FAFC]">Pergerakan:</strong> ${escapeHtml(specObject.gerakanKamera.tipeGerakan)}</li>
-            <li><strong class="text-[#F8FAFC]">Sudut &amp; Framing:</strong> ${escapeHtml(specObject.gerakanKamera.sudutFraming)}</li>
+          <ul class="space-y-1.5 text-xs text-[#A39C8D] leading-relaxed">
+            <li><strong class="text-[#ECE5D3]">Pergerakan:</strong> ${escapeHtml(specObject.gerakanKamera.tipeGerakan)}</li>
+            <li><strong class="text-[#ECE5D3]">Sudut &amp; Framing:</strong> ${escapeHtml(specObject.gerakanKamera.sudutFraming)}</li>
           </ul>
         </article>
 
@@ -2066,13 +2281,13 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-fuchsia-500/20 border border-fuchsia-400/30 flex items-center justify-center text-fuchsia-300 font-mono text-xs font-bold">05</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Transisi Antar-Scene</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Transisi Antar-Scene</h4>
             </div>
             <span class="text-[11px] font-mono text-slate-400">CUT &amp; PACING</span>
           </div>
-          <ul class="space-y-1.5 text-xs text-[#CBD5E1] leading-relaxed">
-            <li><strong class="text-[#F8FAFC]">Jenis Transisi:</strong> ${escapeHtml(specObject.transisiAntarScene.jenisTransisi)}</li>
-            <li><strong class="text-[#F8FAFC]">Tempo / Pacing:</strong> ${escapeHtml(specObject.transisiAntarScene.tempoPacing)}</li>
+          <ul class="space-y-1.5 text-xs text-[#A39C8D] leading-relaxed">
+            <li><strong class="text-[#ECE5D3]">Jenis Transisi:</strong> ${escapeHtml(specObject.transisiAntarScene.jenisTransisi)}</li>
+            <li><strong class="text-[#ECE5D3]">Tempo / Pacing:</strong> ${escapeHtml(specObject.transisiAntarScene.tempoPacing)}</li>
           </ul>
         </article>
 
@@ -2081,7 +2296,7 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 font-mono text-xs font-bold">06</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">CTA (Call to Action)</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">CTA (Call to Action)</h4>
             </div>
             <button type="button" onclick="copyToClipboard('${ctaBtnColor}', 'Warna CTA ${ctaBtnColor} tersalin!')"
               class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-studioWell border border-studioBorder font-mono text-[11px] font-semibold text-emerald-300">
@@ -2089,10 +2304,10 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
               ${ctaBtnColor}
             </button>
           </div>
-          <ul class="space-y-1.5 text-xs text-[#CBD5E1] leading-relaxed">
-            <li><strong class="text-[#F8FAFC]">Teks CTA:</strong> <span class="text-emerald-300 font-semibold">${escapeHtml(specObject.cta.teksCta)}</span></li>
-            <li><strong class="text-[#F8FAFC]">Posisi Tombol:</strong> ${escapeHtml(specObject.cta.posisiTombol)}</li>
-            <li><strong class="text-[#F8FAFC]">Strategi Konversi:</strong> ${escapeHtml(specObject.cta.strategiKonversi)}</li>
+          <ul class="space-y-1.5 text-xs text-[#A39C8D] leading-relaxed">
+            <li><strong class="text-[#ECE5D3]">Teks CTA:</strong> <span class="text-emerald-300 font-semibold">${escapeHtml(specObject.cta.teksCta)}</span></li>
+            <li><strong class="text-[#ECE5D3]">Posisi Tombol:</strong> ${escapeHtml(specObject.cta.posisiTombol)}</li>
+            <li><strong class="text-[#ECE5D3]">Strategi Konversi:</strong> ${escapeHtml(specObject.cta.strategiKonversi)}</li>
           </ul>
         </article>
 
@@ -2101,15 +2316,15 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-300 font-mono text-xs font-bold">07</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Subtitle &amp; Tipografi</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Subtitle &amp; Tipografi</h4>
             </div>
             <span class="text-[11px] font-mono text-slate-400">FONT &amp; TEKS</span>
           </div>
-          <ul class="space-y-1.5 text-xs text-[#CBD5E1] leading-relaxed">
-            <li><strong class="text-[#F8FAFC]">Gaya Font:</strong> ${escapeHtml(specObject.subtitle.gayaFont)}</li>
-            <li><strong class="text-[#F8FAFC]">Hierarki Ukuran:</strong> ${escapeHtml(specObject.subtitle.hierarkiUkuran)}</li>
-            <li><strong class="text-[#F8FAFC]">Warna &amp; Latar:</strong> ${escapeHtml(specObject.subtitle.warnaTeksDanLatar)}</li>
-            <li><strong class="text-[#F8FAFC]">Teks Terbaca:</strong> <span class="text-amber-200">${escapeHtml(specObject.subtitle.teksTerbaca)}</span></li>
+          <ul class="space-y-1.5 text-xs text-[#A39C8D] leading-relaxed">
+            <li><strong class="text-[#ECE5D3]">Gaya Font:</strong> ${escapeHtml(specObject.subtitle.gayaFont)}</li>
+            <li><strong class="text-[#ECE5D3]">Hierarki Ukuran:</strong> ${escapeHtml(specObject.subtitle.hierarkiUkuran)}</li>
+            <li><strong class="text-[#ECE5D3]">Warna &amp; Latar:</strong> ${escapeHtml(specObject.subtitle.warnaTeksDanLatar)}</li>
+            <li><strong class="text-[#ECE5D3]">Teks Terbaca:</strong> <span class="text-amber-200">${escapeHtml(specObject.subtitle.teksTerbaca)}</span></li>
           </ul>
         </article>
 
@@ -2118,13 +2333,13 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
           <div class="flex items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="w-7 h-7 rounded-lg bg-rose-500/20 border border-rose-400/30 flex items-center justify-center text-rose-300 font-mono text-xs font-bold">08</span>
-              <h4 class="text-sm font-bold text-[#F8FAFC]">Efek Suara (SFX &amp; Audio)</h4>
+              <h4 class="text-sm font-bold text-[#ECE5D3]">Efek Suara (SFX &amp; Audio)</h4>
             </div>
             <span class="text-[11px] font-mono text-slate-400">AUDIO DESIGN</span>
           </div>
-          <ul class="space-y-1.5 text-xs text-[#CBD5E1] leading-relaxed">
-            <li><strong class="text-[#F8FAFC]">Desain SFX:</strong> ${escapeHtml(specObject.efekSuara.desainSfx)}</li>
-            <li><strong class="text-[#F8FAFC]">Rekomendasi Audio:</strong> ${escapeHtml(specObject.efekSuara.rekomendasiAudio)}</li>
+          <ul class="space-y-1.5 text-xs text-[#A39C8D] leading-relaxed">
+            <li><strong class="text-[#ECE5D3]">Desain SFX:</strong> ${escapeHtml(specObject.efekSuara.desainSfx)}</li>
+            <li><strong class="text-[#ECE5D3]">Rekomendasi Audio:</strong> ${escapeHtml(specObject.efekSuara.rekomendasiAudio)}</li>
           </ul>
         </article>
       `;
@@ -2176,9 +2391,9 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
       pill.addEventListener('click', () => {
         const filter = pill.getAttribute('data-filter');
         document.querySelectorAll('.filter-pill').forEach((p) => {
-          p.className = 'filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#CBD5E1] border border-studioBorder hover:text-white transition';
+          p.className = 'filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-studioCard text-[#A39C8D] border border-studioBorder hover:text-[#ECE5D3] transition';
         });
-        pill.className = 'filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition';
+        pill.className = 'filter-pill px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-600 text-[#191712] transition';
 
         document.querySelectorAll('.analysis-detail-card').forEach((card) => {
           if (filter === 'all' || card.getAttribute('data-category') === filter) {
@@ -2370,9 +2585,9 @@ Berikan JSON valid dengan 8 bagian analisis berikut:
       pill.addEventListener('click', () => {
         state.selectedRatio = pill.getAttribute('data-ratio');
         document.querySelectorAll('.ratio-pill').forEach((p) => {
-          p.className = 'ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#CBD5E1] border border-studioBorder hover:border-indigo-400/40 text-center transition';
+          p.className = 'ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-studioWell text-[#A39C8D] border border-studioBorder hover:border-indigo-400/40 text-center transition';
         });
-        pill.className = 'ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-indigo-600 text-white border border-indigo-400/50 text-center transition';
+        pill.className = 'ratio-pill w-full px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-indigo-600 text-[#191712] border border-indigo-400/50 text-center transition';
       });
     });
 
@@ -2578,7 +2793,7 @@ Buat ${params.count} variasi dengan pendekatan komposisi, pencahayaan, atau ekse
         { title: 'Variasi 4 — Perspektif Dinamis & Aksen Energi', creativeFocus: 'Fokus sudut kamera dinamis dengan aksen cahaya kontras tinggi' }
       ];
 
-      const hexList = params.sampledHexes?.length ? params.sampledHexes.slice(0, 5).join(', ') : '#0B0F19, #6366F1, #38BDF8, #F8FAFC';
+      const hexList = params.sampledHexes?.length ? params.sampledHexes.slice(0, 5).join(', ') : '#191712, #E3A72F, #86A98F, #ECE5D3';
       const lockedDesc = params.checkedPreserve.length
         ? params.checkedPreserve.map((item) => (item === 'Warna' ? `Warna (palet referensi: ${hexList})` : item)).join(', ')
         : 'Tidak ada elemen yang dikunci (eksplorasi kreatif penuh)';
@@ -2677,9 +2892,9 @@ LIGHTING, TYPOGRAPHY & RENDER QUALITY:
               <div>
                 <div class="flex items-center gap-2">
                   <span class="px-2 py-0.5 rounded-md ${profile.isGemini ? 'bg-sky-500/20 text-sky-300' : 'bg-emerald-500/20 text-emerald-300'} font-mono text-[11px] font-bold">#${idx + 1}</span>
-                  <h4 class="text-xs sm:text-sm font-bold text-[#F8FAFC]">${escapeHtml(sanitizeText(v.title, `Variasi ${idx + 1}`))}</h4>
+                  <h4 class="text-xs sm:text-sm font-bold text-[#ECE5D3]">${escapeHtml(sanitizeText(v.title, `Variasi ${idx + 1}`))}</h4>
                 </div>
-                <p class="text-[11px] text-[#CBD5E1] mt-0.5">${escapeHtml(sanitizeText(v.creativeFocus, ''))}</p>
+                <p class="text-[11px] text-[#A39C8D] mt-0.5">${escapeHtml(sanitizeText(v.creativeFocus, ''))}</p>
               </div>
               <div class="flex items-center gap-2 shrink-0">
                 ${profile.isGemini ? `
@@ -2690,7 +2905,7 @@ LIGHTING, TYPOGRAPHY & RENDER QUALITY:
                   </button>
                 ` : ''}
                 <button type="button" onclick="copySingleVariation(${idx})"
-                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm transition">
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-[#191712] shadow-sm transition">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
                   Salin Prompt
                 </button>
@@ -2702,8 +2917,8 @@ LIGHTING, TYPOGRAPHY & RENDER QUALITY:
             </div>
           </div>
           <div class="p-4 sm:p-5 bg-studioCard/70 space-y-3">
-            <pre class="whitespace-pre-wrap font-mono text-xs sm:text-[13px] leading-relaxed text-[#F8FAFC]">${escapeHtml(sanitizeText(v.promptText, ''))}</pre>
-            <div class="pt-2.5 border-t border-studioBorder/70 flex items-center gap-2 text-[11px] text-[#CBD5E1]">
+            <pre class="whitespace-pre-wrap font-mono text-xs sm:text-[13px] leading-relaxed text-[#ECE5D3]">${escapeHtml(sanitizeText(v.promptText, ''))}</pre>
+            <div class="pt-2.5 border-t border-studioBorder/70 flex items-center gap-2 text-[11px] text-[#A39C8D]">
               <span class="px-1.5 py-0.5 rounded bg-studioWell border border-studioBorder font-mono text-[10px] ${profile.isGemini ? 'text-sky-300' : 'text-emerald-300'}">Panduan</span>
               <span>${escapeHtml(profile.guideText)}</span>
             </div>
@@ -2901,8 +3116,8 @@ LIGHTING, TYPOGRAPHY & RENDER QUALITY:
           </div>
           <div class="p-3 space-y-2.5 flex-1 flex flex-col justify-between">
             <div>
-              <div class="text-xs font-bold text-[#F8FAFC] truncate">${escapeHtml(item.variationTitle)}</div>
-              <p class="text-[11px] text-[#CBD5E1] line-clamp-2 mt-0.5">${escapeHtml(item.promptUsed)}</p>
+              <div class="text-xs font-bold text-[#ECE5D3] truncate">${escapeHtml(item.variationTitle)}</div>
+              <p class="text-[11px] text-[#A39C8D] line-clamp-2 mt-0.5">${escapeHtml(item.promptUsed)}</p>
             </div>
             <div class="grid grid-cols-3 gap-1.5 pt-1">
               <button type="button" onclick="downloadGeneratedPng(${idx})"
@@ -2925,101 +3140,3 @@ LIGHTING, TYPOGRAPHY & RENDER QUALITY:
         </div>
       `).join('');
     }
-
-    function downloadGeneratedPng(idx) {
-      const item = state.generatedImages[idx];
-      if (!item) return;
-      const a = document.createElement('a');
-      a.href = item.dataUrl;
-      a.download = `gemini-image-${item.ratio.replace(':', 'x')}-${idx + 1}.png`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      showToast('Gambar PNG berhasil diunduh!', 'success');
-    }
-
-    function deleteGeneratedImage(idx) {
-      state.generatedImages.splice(idx, 1);
-      renderGeminiImageGallery();
-      showToast('Gambar berhasil dihapus dari galeri.', 'info');
-      
-      if (state.generatedImages.length === 0) {
-        document.getElementById('gemini-image-gallery-card').classList.add('hidden');
-      }
-    }
-
-    function reuseGeneratedAsReference(idx) {
-      const item = state.generatedImages[idx];
-      if (!item) return;
-      const img = new Image();
-      img.onload = () => {
-        const processed = processImageElementToCanvas(img);
-        state.refMedia = {
-          name: `gemini-remix-${idx + 1}.png`,
-          ...processed
-        };
-        updateRefPreviewUI();
-        showToast('Hasil Gemini Image dimuat sebagai Gambar Referensi baru untuk remix lanjutan!', 'success');
-      };
-      img.src = item.dataUrl;
-    }
-
-    document.getElementById('direct-gemini-image-btn').addEventListener('click', () => {
-      generateGeminiImageNow(0);
-    });
-
-    document.getElementById('copy-all-variations-btn').addEventListener('click', () => {
-      if (!state.generatedVariations.length) return;
-      const combined = state.generatedVariations
-        .map((v, i) => `=== VARIASI ${i + 1}: ${sanitizeText(v.title, `Variasi ${i + 1}`)} ===\n${sanitizeText(v.promptText, '')}`)
-        .join('\n\n==================================================\n\n');
-      copyToClipboard(combined, `Tersalin! Semua (${state.generatedVariations.length}) variasi prompt disalin.`);
-    });
-
-    // =========================================================================
-    // 8. GLOBAL CLIPBOARD PASTE LISTENER (Ctrl+V / Cmd+V)
-    // =========================================================================
-    // 8. GLOBAL CLIPBOARD PASTE LISTENER (Ctrl+V / Cmd+V) & INIT
-    // =========================================================================
-    window.addEventListener('paste', (e) => {
-      const items = e.clipboardData?.items;
-      if (!items) return;
-
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].type.indexOf('image') !== -1) {
-          const file = items[i].getAsFile();
-          if (file) {
-            e.preventDefault();
-            if (state.viewMode === 'analyzer') {
-              handleAnalyzerFile(file);
-            } else if (state.viewMode === 'generator') {
-              handleReferenceImageFile(file);
-            } else {
-              // In 2-column split mode, route to whichever dropzone is hovered/focused, defaulting to Reference Generator if Analyzer already has media
-              const activeEl = document.activeElement;
-              if (activeEl && activeEl.id === 'analyzer-dropzone') {
-                handleAnalyzerFile(file);
-              } else if (activeEl && activeEl.id === 'ref-paste-zone') {
-                handleReferenceImageFile(file);
-              } else if (!state.refMedia.dataUrl && state.analyzerMedia.dataUrl) {
-                handleReferenceImageFile(file);
-              } else {
-                handleReferenceImageFile(file);
-              }
-            }
-          }
-          break;
-        }
-      }
-    });
-
-    // Initialize default state on load
-    try {
-      const savedKey = localStorage.getItem('dpa_gemini_api_key');
-      if (savedKey) state.customApiKey = savedKey;
-    } catch (e) {}
-    syncOutputTypeUI();
-    switchViewMode('split');
-  </script>
-</body>
-</html>
